@@ -1,0 +1,28 @@
+{
+    "testCaseBuyProductSuccesfully": {
+        "firstname": "testName",
+        "lastname": "testLastName",
+        "email": "myTest@gmail.com",
+        "telephone": "+57 32066666",
+        "password": "12345",
+        "address_1": "Calle test 123",
+        "city": "Medellin",
+        "postcode": "33333",
+        "country": "Colombia",
+        "region": "Antioquia"
+    },
+
+    "testCasePasswordsDontMatch": {
+        "firstname": "testName",
+        "lastname": "testLastName",
+        "email": "myTest@gmail.com",
+        "telephone": "+57 32066666",
+        "password": "12345",
+        "address_1": "Calle test 123",
+        "city": "Medellin",
+        "postcode": "33333",
+        "country": "Colombia",
+        "region": "Antioquia",
+        "wrongPassword": "54321"
+    }
+}
