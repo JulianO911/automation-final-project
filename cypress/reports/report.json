@@ -1,0 +1,260 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 8,
+    "passes": 8,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-29T01:35:50.379Z",
+    "end": "2023-06-29T01:36:46.505Z",
+    "duration": 56126,
+    "testsRegistered": 8,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ef60c36c-670e-45db-b0ed-1fc58206a5ca",
+      "title": "",
+      "fullFile": "cypress\\e2e\\mainScript.cy.js",
+      "file": "cypress\\e2e\\mainScript.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eed3a0aa-8f77-495f-9a65-ba97172f1b70",
+          "title": "UI testing suit",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add product to basket and cancel",
+              "fullTitle": "UI testing suit Add product to basket and cancel",
+              "timedOut": null,
+              "duration": 18843,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Product.visit();\nProduct.addProductToCart();\nProduct.clickOnDeleteProduct();\nProduct.verifyContentMessage();",
+              "err": {},
+              "uuid": "29921840-69c6-4c79-8315-cecabb4462ab",
+              "parentUUID": "eed3a0aa-8f77-495f-9a65-ba97172f1b70",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buy a product - form is not filled",
+              "fullTitle": "UI testing suit Buy a product - form is not filled",
+              "timedOut": null,
+              "duration": 5401,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Product.visit();\nProduct.addProductToCart();\nProduct.clickOnCheckout();\nProduct.clickOnContinueCheckoutButton();\nProduct.verifyCheckoutInputWarnings();",
+              "err": {},
+              "uuid": "c7d6bb8c-9ced-4c81-a386-f5aa2b94bbdd",
+              "parentUUID": "eed3a0aa-8f77-495f-9a65-ba97172f1b70",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buy a product - passwords dont match",
+              "fullTitle": "UI testing suit Buy a product - passwords dont match",
+              "timedOut": null,
+              "duration": 8438,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Product.visit();\nProduct.addProductToCart();\nProduct.clickOnCheckout();\ncy.fixture(\"productData\").then(data => {\n  Product.inputRegisterFields(data.testCasePasswordsDontMatch);\n  Product.confirmPassword(data.testCasePasswordsDontMatch.wrongPassword);\n});\nProduct.finishingCheckoutCheckboxes();\nProduct.clickOnContinueCheckoutButton();\nProduct.verifyWrongPasswordMessage();",
+              "err": {},
+              "uuid": "ffaf45f3-1007-48da-911a-d578766115d0",
+              "parentUUID": "eed3a0aa-8f77-495f-9a65-ba97172f1b70",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buy a product - order placed",
+              "fullTitle": "UI testing suit Buy a product - order placed",
+              "timedOut": null,
+              "duration": 11395,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Product.visit();\nProduct.addProductToCart();\nProduct.clickOnCheckout();\ncy.fixture(\"productData\").then(data => {\n  Product.inputRegisterFields(data.testCaseBuyProductSuccesfully);\n  Product.confirmPassword(data.testCaseBuyProductSuccesfully.password);\n});\nProduct.finishingCheckoutCheckboxes();\nProduct.clickOnContinueCheckoutButton();\nProduct.buttonConfirm();\nProduct.succesOrderVerification();",
+              "err": {},
+              "uuid": "b27df4ca-9df7-4c79-b818-74cc623fee08",
+              "parentUUID": "eed3a0aa-8f77-495f-9a65-ba97172f1b70",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buy a product after logged: quick buy",
+              "fullTitle": "UI testing suit Buy a product after logged: quick buy",
+              "timedOut": null,
+              "duration": 10707,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Login.visit();\ncy.fixture(\"productData\").then(data => {\n  Login.loginProcess(data.testCaseBuyProductSuccesfully.email, data.testCaseBuyProductSuccesfully.password);\n});\nProduct.visit();\nProduct.quickBuy();\nProduct.termsConditionsCheckbox();\nProduct.clickOnContinueCheckoutButton();\nProduct.buttonConfirm();\nProduct.succesOrderVerification();",
+              "err": {},
+              "uuid": "9ddf7daf-68b8-4ee7-b56c-b51cd76a90ff",
+              "parentUUID": "eed3a0aa-8f77-495f-9a65-ba97172f1b70",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "29921840-69c6-4c79-8315-cecabb4462ab",
+            "c7d6bb8c-9ced-4c81-a386-f5aa2b94bbdd",
+            "ffaf45f3-1007-48da-911a-d578766115d0",
+            "b27df4ca-9df7-4c79-b818-74cc623fee08",
+            "9ddf7daf-68b8-4ee7-b56c-b51cd76a90ff"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 54784,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "4dd3fd70-d68e-4f09-945c-1cda21579432",
+          "title": "API testing suit",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "create an user",
+              "fullTitle": "API testing suit create an user",
+              "timedOut": null,
+              "duration": 875,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture(\"userData\").then(data => {\n  User.createAnUser(data.userBody);\n});",
+              "err": {},
+              "uuid": "7214c2ca-0e0b-4626-ac99-0ad9c0b7ab39",
+              "parentUUID": "4dd3fd70-d68e-4f09-945c-1cda21579432",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "get user by username",
+              "fullTitle": "API testing suit get user by username",
+              "timedOut": null,
+              "duration": 127,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture(\"userData\").then(data => {\n  User.getUserByUsername(data.userBody);\n});",
+              "err": {},
+              "uuid": "2ef698de-db31-4e0e-a601-ace3eb660d8b",
+              "parentUUID": "4dd3fd70-d68e-4f09-945c-1cda21579432",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "trying to delete an user that doesnt exist",
+              "fullTitle": "API testing suit trying to delete an user that doesnt exist",
+              "timedOut": null,
+              "duration": 119,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture(\"userData\").then(data => {\n  User.tryToDeleteAnNonExistUser(data.invalidUser.username);\n});",
+              "err": {},
+              "uuid": "32c8a2db-b1ed-4429-a128-b06ef5d62c75",
+              "parentUUID": "4dd3fd70-d68e-4f09-945c-1cda21579432",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7214c2ca-0e0b-4626-ac99-0ad9c0b7ab39",
+            "2ef698de-db31-4e0e-a601-ace3eb660d8b",
+            "32c8a2db-b1ed-4429-a128-b06ef5d62c75"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1121,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

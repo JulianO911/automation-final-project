@@ -1,0 +1,18 @@
+{
+    "userBody": {
+        
+        "id": 100,
+        "username": "test911",
+        "firstName": "testName",
+        "lastName": "testLastName",
+        "email": "test@gmail.com",
+        "password": "123",
+        "phone": "11111",
+        "userStatus": 2
+    },
+
+    "invalidUser": {
+        
+        "username": "nonExist"
+    }
+}
